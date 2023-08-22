@@ -3,6 +3,8 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@iconify/icons-twemoji": "^1.2.8",
+    "@iconify/react": "^4.1.1",
     "@reduxjs/toolkit": "^1.9.5",
     "autoprefixer": "^10.4.14",
     "bootstrap": "^5.3.1",
