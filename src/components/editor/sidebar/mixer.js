@@ -2,7 +2,7 @@ function App(props) {
   return (
     <div className={`${props.className}`} style={{ ...props.style }}>
       <div className="w-full flex flex-col p-[10px] border-b border-black">
-        <img src="/assets/imgs/mixPhoto.png" className="w-full" />
+        <img src="/assets/imgs/mixPhoto.png" className="w-full" alt="mix" />
         <div className="flex my-[10px] text-white">
           <div className="h-[24px] leading-[24px] mr-auto">123123</div>
           <div className="ml-auto">

@@ -1,17 +1,6 @@
-import { useLocation, useNavigate } from "react-router";
 import { Icon } from "@iconify/react";
-import router from "../../routes";
 
 const Component = () => {
-  const navigate = useNavigate();
-  const currentPath = useLocation()?.pathname;
-  const routerPaths = router[0]["children"].map((route) => route["path"]);
-
-  const goBack = () => {
-    navigate(routerPaths[routerPaths.indexOf(currentPath) - 1]);
-  };
-  const closeSlide = () => console.log("closeSlide");
-
   return (
     <div className="flex justify-between w-full">
       <div className="float-left">
