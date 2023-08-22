@@ -1,0 +1,115 @@
+.my-accordion .accordion-item {
+  color: white;
+  background: none;
+  border: 0;
+  border-radius: 0;
+}
+
+.my-accordion .accordion-body {
+  padding: 0 10px 30px 10px;
+}
+
+.my-accordion .accordion-button {
+  padding: 20px 10px;
+  box-shadow: unset !important;
+  border-radius: 0;
+  color: white;
+}
+
+.my-accordion .accordion-button:not(.collapsed) {
+  background-color: unset;
+  box-shadow: unset;
+}
+
+.my-accordion .accordion-button::after {
+  background-image: none;
+  color: white;
+  content: "\25b4";
+}
+
+.my-accordion .accordion-button:not(.collapsed)::after {
+  background-image: none;
+  color: white;
+}
+
+.my-dropdown .dropdown-toggle {
+  background-color: #423d4c !important;
+  color: white !important;
+  border-color: white !important;
+}
+
+.my-dropdown .dropdown-toggle:hover {
+  opacity: 0.8;
+}
+
+.my-dropdown .dropdown-menu {
+  background-color: #241f2e;
+}
+
+.my-dropdown .dropdown-item {
+  background-color: #241f2e;
+  color: white;
+}
+
+.my-dropdown .dropdown-item:hover {
+  opacity: 0.5;
+}
+
+.my-slider .rc-slider-step,
+.my-slider .rc-slider-rail,
+.my-slider .rc-slider-track {
+  height: 2px;
+  background: gray;
+}
+
+.my-slider .rc-slider-handle {
+  margin-top: -4px;
+  background-color: unset;
+  width: 10px;
+  height: 10px;
+}
+
+.my-slider .rc-slider {
+  margin-bottom: 10px;
+}
+
+.slider-blue-yellow .rc-slider-step {
+  background: linear-gradient(to right, blue, yellow);
+}
+.slider-green-purple .rc-slider-step {
+  background: linear-gradient(to right, green, purple);
+}
+.slider-gray .rc-slider-step {
+  background: gray;
+}
+.slider-violet-orange .rc-slider-step {
+  background: linear-gradient(to right, violet, orange);
+}
+.slider-red-yellow .rc-slider-step {
+  background: linear-gradient(to right, red, yellow);
+}
+.slider-orange-green .rc-slider-step {
+  background: linear-gradient(to right, orange, green);
+}
+.slider-yellow-cyan .rc-slider-step {
+  background: linear-gradient(to right, yellow, cyan);
+}
+.slider-green-blue .rc-slider-step {
+  background: linear-gradient(to right, green, blue);
+}
+.slider-cyan-purple .rc-slider-step {
+  background: linear-gradient(to right, cyan, purple);
+}
+.slider-blue-violet .rc-slider-step {
+  background: linear-gradient(to right, blue, violet);
+}
+.slider-purple-red .rc-slider-step {
+  background: linear-gradient(to right, purple, red);
+}
+
+.slider-filled-white .rc-slider-track {
+  background: white;
+}
+.slider-filled-white .rc-slider-step {
+  height: 0;
+}

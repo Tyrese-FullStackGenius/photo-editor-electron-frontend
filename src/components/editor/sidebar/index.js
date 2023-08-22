@@ -11,12 +11,24 @@ function App(props) {
 
   return (
     <div className={`${props.className}`} style={{ ...props.style }}>
-      {sidebarReducer.selectedTool === "clock" && <Clock />}
-      {sidebarReducer.selectedTool === "style" && <Style />}
-      {sidebarReducer.selectedTool === "cloth" && <Cloth />}
-      {sidebarReducer.selectedTool === "crop" && <Crop />}
-      {sidebarReducer.selectedTool === "mixer" && <Mixer />}
-      {sidebarReducer.selectedTool === "photo" && <Photo />}
+      {sidebarReducer.selectedTool === "clock" && (
+        <Clock className={`${props.className}`} style={{ ...props.style }} />
+      )}
+      {sidebarReducer.selectedTool === "style" && (
+        <Style className={`${props.className}`} style={{ ...props.style }} />
+      )}
+      {sidebarReducer.selectedTool === "cloth" && (
+        <Cloth className={`${props.className}`} style={{ ...props.style }} />
+      )}
+      {sidebarReducer.selectedTool === "crop" && (
+        <Crop className={`${props.className}`} style={{ ...props.style }} />
+      )}
+      {sidebarReducer.selectedTool === "mixer" && (
+        <Mixer className={`${props.className}`} style={{ ...props.style }} />
+      )}
+      {sidebarReducer.selectedTool === "photo" && (
+        <Photo className={`${props.className}`} style={{ ...props.style }} />
+      )}
     </div>
   );
 }
