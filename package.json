@@ -38,7 +38,7 @@
   },
   "build": {
     "appId": "com.tyrese.electron-react",
-    "productName": "electron-react",
+    "productName": "Photo Editor",
     "files": [
       "build/**/*",
       "node_modules/**/*"
