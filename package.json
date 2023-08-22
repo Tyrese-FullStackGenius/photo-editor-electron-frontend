@@ -2,8 +2,9 @@
   "name": "pyqt-web",
   "version": "0.1.0",
   "private": true,
+  "main": "electron/main.js",
+  "homepage": "./",
   "dependencies": {
-    "@iconify/icons-twemoji": "^1.2.8",
     "@iconify/react": "^4.1.1",
     "@reduxjs/toolkit": "^1.9.5",
     "autoprefixer": "^10.4.14",
@@ -21,10 +22,23 @@
     "web-vitals": "^2.1.4"
   },
   "scripts": {
-    "start": "react-scripts start",
+    "start-linux": "export BROWSER=none && react-scripts start",
+    "start-win": "set BROWSER=none && react-scripts start",
+    "start-electron-linux": "export ELECTRON_START_URL=http://localhost:3000 && electron .",
+    "start-electron-win": "set ELECTRON_START_URL=http://localhost:3000 && electron .",
     "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "build-electron-linux": "mkdir build/src && cp -r electron/. build/electron",
+    "build-electron-win": "mkdir build\\src && Xcopy /E /I /Y electron build\\electron",
+    "package-linux": "npm run build && npm run build-electron-linux && electron-builder build -c.extraMetadata.main=build/electron/main.js --publish never",
+    "package-win": "npm run build && npm run build-electron-win && electron-builder build -c.extraMetadata.main=build/electron/main.js --publish never"
+  },
+  "build": {
+    "appId": "com.tyrese.electron-react",
+    "productName": "electron-react",
+    "files": [
+      "build/**/*",
+      "node_modules/**/*"
+    ]
   },
   "eslintConfig": {
     "extends": [
