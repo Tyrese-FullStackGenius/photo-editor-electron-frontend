@@ -5,7 +5,7 @@ import MainLayout from "./layouts/main";
 
 import Dashboard from "./pages/dashboard";
 import Editor from "./pages/editor";
-import Login from "./pages/login";
+import Home from "./pages/home";
 import Library from "./pages/library";
 
 const router = [
@@ -25,8 +25,8 @@ const router = [
         element: <Editor />,
       },
       {
-        path: "/login",
-        element: <Login />,
+        path: "/home",
+        element: <Home />,
       },
     ],
   },
