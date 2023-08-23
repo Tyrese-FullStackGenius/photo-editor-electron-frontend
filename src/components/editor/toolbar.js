@@ -1,5 +1,5 @@
-import { Icon } from "@iconify/react";
 import { useSelector, useDispatch } from "react-redux";
+import { Icon } from "@iconify/react";
 import { shopSelect } from "../../redux/actions/sidebarAction";
 
 function App(props) {
@@ -71,9 +71,6 @@ function App(props) {
       <Icon icon="ph:minus-thin" className="w-[30px] h-[30px] mx-[10px]" />
       <button className="w-full h-[50px] hover:bg-[#494453]">
         <Icon icon="ic:baseline-plus" className="w-[30px] h-[30px] m-[10px]" />
-      </button>
-      <button className="w-full h-[50px] hover:bg-[#494453] mt-auto">
-        <Icon icon="ph:question-fill" className="w-[30px] h-[30px] m-[10px]" />
       </button>
     </div>
   );

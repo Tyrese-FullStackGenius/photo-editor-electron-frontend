@@ -1,7 +1,7 @@
 import { SELECT_TOOLBAR_ICON } from "../types/sidebarType";
 
 const initialState = {
-  selectedTool: "mixer",
+  selectedTool: "style",
 };
 
 const dateTimeReducer = (state = initialState, action) => {

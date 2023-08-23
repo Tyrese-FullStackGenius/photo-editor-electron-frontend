@@ -5,6 +5,10 @@
   border-radius: 0;
 }
 
+.my-accordion .accordion-item.border-bottom-black {
+  border-bottom: 1px solid black;
+}
+
 .my-accordion .accordion-body {
   padding: 0 10px 30px 10px;
 }
@@ -35,7 +39,20 @@
 .my-dropdown .dropdown-toggle {
   background-color: #423d4c !important;
   color: white !important;
-  border-color: white !important;
+  /* border-color: white !important; */
+  border: 0;
+  padding-right: 30px;
+}
+
+.my-dropdown .dropdown-toggle::after {
+  position: absolute;
+  right: 15px;
+  top: calc(50% - 10px);
+  width: 10px;
+  height: 10px;
+  border: 0;
+  content: url("https://api.iconify.design/ep/arrow-down.svg");
+  filter: brightness(0) invert(1);
 }
 
 .my-dropdown .dropdown-toggle:hover {
@@ -73,6 +90,12 @@
   margin-bottom: 10px;
 }
 
+.my-slider .rc-slider-dot {
+  top: -1px;
+  height: 4px;
+  width: 4px;
+}
+
 .slider-blue-yellow .rc-slider-step {
   background: linear-gradient(to right, blue, yellow);
 }
@@ -105,6 +128,18 @@
 }
 .slider-purple-red .rc-slider-step {
   background: linear-gradient(to right, purple, red);
+}
+.slider-gray-red .rc-slider-step {
+  background: linear-gradient(to right, gray, red);
+}
+.slider-gray-green .rc-slider-step {
+  background: linear-gradient(to right, gray, green);
+}
+.slider-gray-blue .rc-slider-step {
+  background: linear-gradient(to right, gray, blue);
+}
+.slider-gray-lightgreen .rc-slider-step {
+  background: linear-gradient(to right, gray, lightgreen);
 }
 
 .slider-filled-white .rc-slider-track {

@@ -9,6 +9,8 @@ function App({
   showText,
   text,
   sliderColor,
+  startPoint,
+  dots,
   ...rest
 }) {
   const [currentValue, setValue] = useState(defaultValue || 0);
@@ -26,6 +28,14 @@ function App({
         step={step !== undefined ? step : 1}
         value={currentValue}
         onChange={(val) => setValue(val)}
+        dots={dots === true}
+        startPoint={
+          startPoint !== undefined
+            ? startPoint
+            : from !== undefined
+            ? from
+            : -100
+        }
       />
     </div>
   );

@@ -1,6 +1,6 @@
-import { Icon } from "@iconify/react";
 import { Accordion, Dropdown } from "react-bootstrap";
 import { Scrollbar } from "smooth-scrollbar-react";
+import { Icon } from "@iconify/react";
 import Slider from "../../slider";
 
 function App(props) {
@@ -32,8 +32,8 @@ function App(props) {
         }}
         style={{ height: "calc(100% - 140px)" }}
       >
-        <Accordion defaultActiveKey="1" className="my-accordion">
-          <Accordion.Item eventKey="1">
+        <Accordion defaultActiveKey={["1", "2"]} className="my-accordion">
+          <Accordion.Item eventKey="1" className="border-bottom-black">
             <Accordion.Header>123</Accordion.Header>
             <Accordion.Body className="grid grid-cols-4 gap-[5px]">
               <div className="w-full h-[90px] bg-[#423D4C] text-center ">
@@ -102,7 +102,7 @@ function App(props) {
               </div>
             </Accordion.Body>
           </Accordion.Item>
-          <Accordion.Item eventKey="2">
+          <Accordion.Item eventKey="2" className="border-bottom-black">
             <Accordion.Header>123</Accordion.Header>
             <Accordion.Body>
               <div className="flex">
@@ -115,6 +115,7 @@ function App(props) {
                     <Dropdown.Menu>
                       <Dropdown.Item>Action</Dropdown.Item>
                       <Dropdown.Item>Another action</Dropdown.Item>
+                      <Dropdown.Divider />
                       <Dropdown.Item>Something else</Dropdown.Item>
                     </Dropdown.Menu>
                   </Dropdown>
@@ -128,7 +129,7 @@ function App(props) {
               <Slider className="slider-green-purple" text="123" />
             </Accordion.Body>
           </Accordion.Item>
-          <Accordion.Item eventKey="3">
+          <Accordion.Item eventKey="3" className="border-bottom-black">
             <Accordion.Header>123</Accordion.Header>
             <Accordion.Body>
               <Slider className="slider-gray" text="123" />
@@ -142,7 +143,7 @@ function App(props) {
               <Slider className="slider-gray" text="123" />
             </Accordion.Body>
           </Accordion.Item>
-          <Accordion.Item eventKey="4">
+          <Accordion.Item eventKey="4" className="border-bottom-black">
             <Accordion.Header>123</Accordion.Header>
             <Accordion.Body>
               <div className="grid grid-cols-7">
@@ -180,11 +181,11 @@ function App(props) {
               <Slider className="slider-gray" text="123" />
             </Accordion.Body>
           </Accordion.Item>
-          <Accordion.Item eventKey="5">
+          <Accordion.Item eventKey="5" className="border-bottom-black">
             <Accordion.Header>HSL</Accordion.Header>
             <Accordion.Body>
               <div className="flex">
-                <button className="h-[28px] px-[10px] bg-[#312C3B] hover:bg-[#423D4C] rounded-[4px] mx-[4px]">
+                <button className="h-[28px] px-[10px] bg-[#312C3B] hover:bg-[#423D4C] rounded-[4px] mr-[4px]">
                   123123
                 </button>
                 <button className="h-[28px] px-[10px] bg-[#312C3B] hover:bg-[#423D4C] rounded-[4px] mx-[4px]">
@@ -204,7 +205,7 @@ function App(props) {
               <Slider className="slider-purple-red" text="123" />
             </Accordion.Body>
           </Accordion.Item>
-          <Accordion.Item eventKey="6">
+          <Accordion.Item eventKey="6" className="border-bottom-black">
             <Accordion.Header>123</Accordion.Header>
             <Accordion.Body>
               <Accordion
@@ -305,13 +306,168 @@ function App(props) {
               </Accordion>
             </Accordion.Body>
           </Accordion.Item>
-          <Accordion.Item eventKey="7">
+          <Accordion.Item eventKey="7" className="border-bottom-black">
             <Accordion.Header>123</Accordion.Header>
-            <Accordion.Body>123</Accordion.Body>
+            <Accordion.Body>
+              <Accordion
+                defaultActiveKey="1"
+                className="my-accordion bg-[#181322]"
+              >
+                <Accordion.Item eventKey="1">
+                  <Accordion.Header>
+                    <Slider
+                      className="w-full slider-gray slider-filled-white"
+                      text="123"
+                      from={0}
+                      to={100}
+                      defaultValue={0}
+                    />
+                  </Accordion.Header>
+                  <Accordion.Body>
+                    <Slider
+                      className="w-full slider-gray slider-filled-white"
+                      text="123"
+                      from={0}
+                      to={100}
+                      defaultValue={30}
+                    />
+                    <Slider
+                      className="w-full slider-gray slider-filled-white"
+                      text="123"
+                      from={0}
+                      to={100}
+                      defaultValue={50}
+                    />
+                    <Slider
+                      className="w-full slider-gray slider-filled-white"
+                      text="123"
+                      from={0}
+                      to={100}
+                      defaultValue={15}
+                    />
+                    <Slider
+                      className="w-full slider-gray slider-filled-white"
+                      text="123"
+                      from={0}
+                      to={100}
+                      defaultValue={30}
+                    />
+                    <Slider
+                      className="w-full slider-gray slider-filled-white"
+                      text="123"
+                      from={0}
+                      to={100}
+                      defaultValue={50}
+                    />
+                    <Slider
+                      className="w-full slider-gray slider-filled-white"
+                      text="123"
+                      from={0}
+                      to={100}
+                      defaultValue={10}
+                    />
+                  </Accordion.Body>
+                </Accordion.Item>
+              </Accordion>
+            </Accordion.Body>
           </Accordion.Item>
-          <Accordion.Item eventKey="8">
+          <Accordion.Item eventKey="8" className="border-bottom-black">
             <Accordion.Header>123</Accordion.Header>
-            <Accordion.Body>123</Accordion.Body>
+            <Accordion.Body>
+              <div className="h-[28px] leading-[28px]">123</div>
+              <Slider className="slider-violet-orange" text="123" />
+              <Slider className="slider-gray-red" text="123" />
+              <div className="h-[28px] leading-[28px]">123</div>
+              <Slider className="slider-yellow-cyan" text="123" />
+              <Slider className="slider-gray-green" text="123" />
+              <div className="h-[28px] leading-[28px]">123</div>
+              <Slider className="slider-cyan-purple" text="123" />
+              <Slider className="slider-gray-blue" text="123" />
+            </Accordion.Body>
+          </Accordion.Item>
+          <Accordion.Item eventKey="9" className="border-bottom-black">
+            <Accordion.Header>123</Accordion.Header>
+            <Accordion.Body>
+              <img
+                src="/assets/imgs/img3.png"
+                className="w-full mb-[10px]"
+                alt="mixer"
+              />
+              <Slider
+                className="slider-filled-white"
+                from={0}
+                to={100}
+                defaultValue={50}
+                text="123"
+              />
+              <Slider
+                className="slider-filled-white"
+                from={0}
+                to={100}
+                defaultValue={50}
+                startPoint={50}
+                text="123"
+              />
+            </Accordion.Body>
+          </Accordion.Item>
+          <Accordion.Item eventKey="10" className="border-bottom-black">
+            <Accordion.Header>123</Accordion.Header>
+            <Accordion.Body>
+              <Accordion
+                defaultActiveKey="1"
+                className="my-accordion bg-[#181322] mb-[10px]"
+              >
+                <Accordion.Item eventKey="1">
+                  <Accordion.Header>
+                    <Slider
+                      className="w-full slider-gray slider-filled-white"
+                      text="123"
+                      from={0}
+                      to={200}
+                      defaultValue={100}
+                    />
+                  </Accordion.Header>
+                  <Accordion.Body>
+                    <div className="flex">
+                      <div className="mr-auto h-[28px] leading-[28px]">123</div>
+                      <div className="ml-auto">
+                        <Icon
+                          icon="line-md:switch-filled-to-switch-off-filled-transition"
+                          className="h-[28px] w-[36px] cursor-pointer"
+                        />
+                        {/* <Icon
+                          icon="line-md:switch-off-filled-to-switch-filled-transition"
+                          className="h-[28px] w-[36px] cursor-pointer text-gray-500"
+                        /> */}
+                      </div>
+                    </div>
+                  </Accordion.Body>
+                </Accordion.Item>
+              </Accordion>
+              <Accordion
+                defaultActiveKey="1"
+                className="my-accordion bg-[#181322] mb-[10px]"
+              >
+                <Accordion.Item eventKey="1">
+                  <Accordion.Header>
+                    <Slider
+                      className="w-full slider-gray slider-filled-white"
+                      text="123"
+                      startPoint={0}
+                    />
+                  </Accordion.Header>
+                  <Accordion.Body>
+                    <Slider
+                      className="w-full slider-gray slider-filled-white"
+                      text="123"
+                      from={0}
+                      to={100}
+                      defaultValue={50}
+                    />
+                  </Accordion.Body>
+                </Accordion.Item>
+              </Accordion>
+            </Accordion.Body>
           </Accordion.Item>
         </Accordion>
       </Scrollbar>
